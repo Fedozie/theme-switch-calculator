@@ -1,0 +1,231 @@
+:root {
+  /*Theme 1*/
+  --one-main-background: hsl(222, 26%, 31%);
+  --one-keypad-background: hsl(223, 31%, 20%);
+  --one-screen-background: hsl(224, 36%, 15%);
+  --one-del-key-background: hsl(225, 21%, 49%);
+  --one-del-key-shadow: hsl(224, 28%, 35%);
+  --one-keys-background: hsl(30, 25%, 89%);
+  --one-keys-shadow: hsl(28, 16%, 65%);
+  --one-equal-key-background: hsl(6, 63%, 50%);
+  --one-equal-key-shadow: hsl(6, 70%, 34%);
+  --one-dark-text: hsl(221, 14%, 31%);
+  --one-light-text: hsl(0, 0%, 100%);
+  /*Theme 2*/
+  --two-main-background: hsl(0, 0%, 90%);
+  --two-keypad-background: hsl(0, 5%, 81%);
+  --two-screen-background: hsl(0, 0%, 93%);
+  --two-del-key-background: hsl(185, 42%, 37%);
+  --two-del-key-shadow: hsl(185, 58%, 25%);
+  --two-equal-key-background: hsl(25, 98%, 40%);
+  --two-equal-key-shadow: hsl(25, 99%, 27%);
+  --two-keys-background: hsl(45, 7%, 89%);
+  --two-keys-shadow: hsl(35, 11%, 61%);
+  --two-dark-text: hsl(60, 10%, 19%);
+  --two-light-text: hsl(0, 0, 100%);
+  /*Theme 3*/
+  --three-main-background: hsl(268, 75%, 9%);
+  --three-keypad-background: hsl(268, 71%, 12%);
+  --three-del-key-background: hsl(281, 89%, 26%);
+  --three-del-key-shadow: hsl(285, 91%, 52%);
+  --three-equal-key-background: hsl(176, 100%, 44%);
+  --three-equal-key-shadow: hsl(177, 92%, 70%);
+  --three-keys-background: hsl(268, 47%, 21%);
+  --three-keys-shadow: hsl(290, 70%, 36%);
+  --three-dark-text: hsl(198, 20%, 13%);
+  --three-yellow-text: hsl(52, 100%, 62%); }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; }
+
+body {
+  background-color: var(--one-main-background); }
+
+.calculator-grid {
+  height: 95vh;
+  background-color: var(--one-main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--one-light-text); }
+  .attribution a {
+    color: var(--one-keys-shadow);
+    text-decoration: none; }
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px dotted yellow;
+  height: 11.5%; }
+
+.calculator-logo {
+  font-size: 2rem;
+  color: var(--one-light-text); }
+
+.calculator-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-right: 1rem; }
+  .calculator-switch > p {
+    color: var(--one-light-text); }
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  margin-left: 1rem; }
+
+.switch-types {
+  color: var(--one-light-text); }
+
+.switch-main > label {
+  background: var(--one-keypad-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+  height: 30px;
+  width: 80px; }
+
+.switch-checkbox {
+  opacity: 0;
+  position: absolute; }
+
+.switch-ball {
+  width: 20px;
+  height: 20px;
+  background-color: var(--one-equal-key-background);
+  border-radius: 50%;
+  position: absolute;
+  left: 6px;
+  transition: 0.3s linear; }
+
+.switch-checkbox:checked + label .switch-ball {
+  transform: translateX(48px); }
+
+.calculator-keys {
+  height: 70%;
+  background-color: var(--one-keypad-background);
+  border: 2px dotted yellow;
+  display: grid;
+  grid-template-columns: repeat(4, 4.5rem);
+  grid-template-rows: repeat(4, 4.5rem);
+  justify-content: center;
+  grid-gap: .8rem;
+  padding: 1.5rem;
+  border-radius: 8px; }
+  .calculator-keys > button {
+    border: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: 700; }
+  .calculator-keys > .del, .calculator-keys > .reset, .calculator-keys > .equals {
+    font-size: 1.5rem; }
+
+.white-btn {
+  background-color: var(--one-keys-background);
+  color: var(--one-dark-text);
+  box-shadow: 0px 4px 1px var(--one-keys-shadow); }
+
+.grey-btn {
+  background-color: var(--one-del-key-background);
+  color: var(--one-light-text);
+  box-shadow: 0px 4px 1px var(--one-del-key-shadow); }
+
+.orange-btn {
+  background-color: var(--one-equal-key-background);
+  color: var(--one-light-text);
+  box-shadow: 0px 4px 1px var(--one-equal-key-shadow); }
+
+.zero {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1; }
+
+.one {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1; }
+
+.two {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1; }
+
+.three {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1; }
+
+.four {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1; }
+
+.five {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1; }
+
+.six {
+  grid-column: 3 /span 1;
+  grid-row: 2 / span 1; }
+
+.seven {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1; }
+
+.eight {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1; }
+
+.nine {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1; }
+
+.del {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1; }
+
+.plus {
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 1; }
+
+.point {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1; }
+
+.times {
+  grid-column: 4 / span 1;
+  grid-row: 4 / span 1; }
+
+.equals {
+  grid-column: 3/ span 2;
+  grid-row: 5 / span 1; }
+
+.reset {
+  grid-column: 1/ span 2; }
+
+.calculator-output {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: var(--one-screen-background);
+  width: 100%;
+  height: 15%;
+  border-radius: 3px;
+  border: 2px dotted yellow;
+  color: var(--one-light-text);
+  padding: .5rem; }
+  .calculator-output > .previous-output {
+    font-size: 1.5rem; }
+  .calculator-output > .current-output {
+    margin-top: .5rem;
+    font-size: 2.5rem; }

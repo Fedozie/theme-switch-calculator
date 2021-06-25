@@ -1,0 +1,76 @@
+
+:root{
+    //Color Variables
+    /*Theme 1*/
+    --one-main-background: hsl(222, 26%, 31%);
+    --one-keypad-background: hsl(223, 31%, 20%); //Includes toggle background
+    --one-screen-background: hsl(224, 36%, 15%);
+    --one-del-key-background: hsl(225, 21%, 49%);
+    --one-del-key-shadow: hsl(224, 28%, 35%);
+    --one-keys-background: hsl(30, 25%, 89%);
+    --one-keys-shadow: hsl(28, 16%, 65%);
+    --one-equal-key-background: hsl(6, 63%, 50%); //Includes toggle button colour
+    --one-equal-key-shadow: hsl(6, 70%, 34%);
+    --one-dark-text: hsl(221, 14%, 31%);
+    --one-light-text: hsl(0, 0%, 100%);
+    
+
+    /*Theme 2*/
+    --two-main-background: hsl(0, 0%, 90%);
+    --two-keypad-background: hsl(0, 5%, 81%); //Includes toggle background
+    --two-screen-background: hsl(0, 0%, 93%);
+    --two-del-key-background: hsl(185, 42%, 37%);
+    --two-del-key-shadow: hsl(185, 58%, 25%);
+    --two-equal-key-background: hsl(25, 98%, 40%); //Includes toggle button colour
+    --two-equal-key-shadow: hsl(25, 99%, 27%);
+    --two-keys-background: hsl(45, 7%, 89%);
+    --two-keys-shadow: hsl(35, 11%, 61%);
+    --two-dark-text: hsl(60, 10%, 19%);
+    --two-light-text: hsl(0, 0, 100%);
+
+    /*Theme 3*/
+    --three-main-background: hsl(268, 75%, 9%);
+    --three-keypad-background: hsl(268, 71%, 12%); //Includes toggle background and screen background
+    --three-del-key-background: hsl(281, 89%, 26%);
+    --three-del-key-shadow: hsl(285, 91%, 52%);
+    --three-equal-key-background: hsl(176, 100%, 44%); //Includes toggle button colour
+    --three-equal-key-shadow: hsl(177, 92%, 70%);
+    --three-keys-background: hsl(268, 47%, 21%);
+    --three-keys-shadow: hsl(290, 70%, 36%);
+    --three-dark-text: hsl(198, 20%, 13%);
+    // --three-light-text: hsl(0, 0, 100%);
+    --three-yellow-text: hsl(52, 100%, 62%);
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--one-main-background);
+}
+
+.calculator-grid{
+    height: 95vh;
+    background-color: var(--one-main-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--one-light-text);
+
+    & a{
+        color: var(--one-keys-shadow);
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+
+  <div class="calculator-grid">
+    <div class="calculator-header">
+      <div class="calculator-logo">calc</div>
+      <div class="calculator-switch">
+        <p>THEME</p>
+        <div class="switch">
+          <div class="switch-types">1 2 3</div>
+          <div class="switch-main">
+            <input type="checkbox" class="switch-checkbox" id="checkbox"/>
+            <label for="checkbox">
+              <div class="switch-ball"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-output">
+      <div class="previous-output"> 20 /</div>
+      <div class="current-output">2</div>
+    </div>
+    <div class="calculator-keys">
+      <button class="white-btn zero" data-number>0</button>
+      <button class="white-btn one" data-number>1</button>
+      <button class="white-btn two" data-number>2</button>
+      <button class="white-btn three" data-number>3</button>
+      <button class="white-btn four" data-number>4</button>
+      <button class="white-btn five" data-number>5</button>
+      <button class="white-btn six" data-number>6</button>
+      <button class="white-btn seven" data-number>7</button>
+      <button class="white-btn eight" data-number>8</button>
+      <button class="white-btn nine" data-number>9</button>
+      <button class="white-btn point" data-number>.</button>
+      <button class="white-btn times" data-operation>&times;</button>
+      <button class="white-btn plus" data-operation>&plus;</button>
+      <button class="white-btn" data-operation>&minus;</button>
+      <button class="orange-btn equals" data-equal>&equals;</button>
+      <button class="white-btn" data-operation>/</button>
+      <button class="grey-btn del" data-delete>DEL</button>
+      <button class="grey-btn reset" data-reset>RESET</button>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Edozie</a>.
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
