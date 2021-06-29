@@ -1,6 +1,9 @@
 
 :root{
-    //Color Variables
+    //TYPOGRAPHY
+    --font-type: 'Spartan', sans-serif;
+
+    //COLOUR VARIABLES
     /*Theme 1*/
     --one-main-background: hsl(222, 26%, 31%);
     --one-keypad-background: hsl(223, 31%, 20%); //Includes toggle background
@@ -13,7 +16,6 @@
     --one-equal-key-shadow: hsl(6, 70%, 34%);
     --one-dark-text: hsl(221, 14%, 31%);
     --one-light-text: hsl(0, 0%, 100%);
-    
 
     /*Theme 2*/
     --two-main-background: hsl(0, 0%, 90%);
@@ -38,9 +40,14 @@
     --three-keys-background: hsl(268, 47%, 21%);
     --three-keys-shadow: hsl(290, 70%, 36%);
     --three-dark-text: hsl(198, 20%, 13%);
-    // --three-light-text: hsl(0, 0, 100%);
+    --three-light-text: hsl(0, 0, 100%);
     --three-yellow-text: hsl(52, 100%, 62%);
 }
+
+//RESPONSIVE BREAKPOINTS 
+$bp-super-main: 48em; //768px/16px = 48em
+$bp-main: 27em; //432px/16px = 26.5625em
+$bp-sub-main: 20em; //320px/16px = 20em
 
 *, *::before, *::after{
     box-sizing: inherit;
@@ -49,10 +56,27 @@
 html{
     box-sizing: border-box;
     font-size: 100%;
+    font-family: var(--font-type);
+
+    @media only screen and (max-width: $bp-sub-main){
+        font-size: 85%;
+    }
+
+    @media only screen and (min-width: $bp-main){
+        font-size: 110%;
+    }
 }
 
 body{
     background-color: var(--one-main-background);
+
+    @media only screen and (min-width: $bp-main){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 3.5rem;
+    }
 }
 
 .calculator-grid{
@@ -61,6 +85,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media only screen and (min-width: $bp-main){
+        width: 80%;
+    }
 }
 
 .attribution{
