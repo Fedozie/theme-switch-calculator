@@ -88,17 +88,21 @@ body {
   height: 11.5%; }
 
 .calculator-logo {
-  font-size: 2rem;
-  color: var(--one-light-text); }
+  font-size: 2.3rem;
+  color: var(--one-light-text);
+  margin-top: 10px; }
 
 .calculator-switch {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 40%;
   margin-right: 1rem; }
   .calculator-switch > p {
-    color: var(--one-light-text); }
+    font-size: .8rem;
+    color: var(--one-light-text);
+    font-weight: 100;
+    margin: 0; }
 
 .switch {
   display: flex;
@@ -107,9 +111,13 @@ body {
   margin-left: 1rem; }
 
 .switch-types {
-  color: var(--one-light-text); }
+  color: var(--one-light-text);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: .8rem; }
 
-.switch-main > label {
+.switch-main {
   background: var(--one-keypad-background);
   display: flex;
   justify-content: space-between;
@@ -119,9 +127,16 @@ body {
   height: 30px;
   width: 80px; }
 
-.switch-checkbox {
-  opacity: 0;
-  position: absolute; }
+input[type="radio"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0; }
+
+input[type="radio"]:nth-of-type(2) {
+  left: 28px; }
+
+input[type="radio"]:last-of-type {
+  right: 4px; }
 
 .switch-ball {
   width: 20px;
@@ -130,10 +145,8 @@ body {
   border-radius: 50%;
   position: absolute;
   left: 6px;
-  transition: 0.3s linear; }
-
-.switch-checkbox:checked + label .switch-ball {
-  transform: translateX(48px); }
+  transition: 0.3s linear;
+  cursor: pointer; }
 
 .calculator-keys {
   height: 70%;
@@ -260,3 +273,15 @@ body {
   .calculator-output > .current-output {
     margin-top: .5rem;
     font-size: 2.5rem; }
+
+body.light {
+  background-color: var(--two-main-background); }
+
+body.light .calculator-grid {
+  background-color: var(--two-main-background); }
+
+body.light .calculator-logo, body.light .calculator-switch > p, body.light .switch-types {
+  color: var(--two-dark-text); }
+
+body.light .switch-main {
+  background: var(--two-keypad-background); }

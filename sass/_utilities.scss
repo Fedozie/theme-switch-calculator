@@ -1,0 +1,42 @@
+body.light{
+    background-color: var(--two-main-background);
+}
+
+body.light .calculator-grid{
+    background-color: var(--two-main-background);
+}
+
+body.light .calculator-logo, body.light .calculator-switch > p, body.light .switch-types{
+    color: var(--two-dark-text); 
+}
+
+body.light .switch-main, body.light .calculator-keys{
+    background: var(--two-keypad-background);
+}
+
+body.light .switch-ball{
+    background-color: var(--two-equal-key-background);
+}
+
+body.light .white-btn{
+    background-color: var(--two-keys-background);
+    color: var(--two-dark-text);
+    box-shadow: 0px 4px 1px var(--two-keys-shadow);
+}
+
+body.light .grey-btn{
+    background-color: var(--two-del-key-background);
+    color: var(--two-light-text);
+    box-shadow: 0px 4px 1px var(--two-del-key-shadow);
+}
+
+body.light .orange-btn{
+    background-color: var(--two-equal-key-background);
+    color: var(--two-light-text);
+    box-shadow: 0px 4px 1px var(--two-equal-key-shadow);
+}
+
+body.light .calculator-output{
+    background-color: var(--two-screen-background);
+    color: var(--two-dark-text);
+}

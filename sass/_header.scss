@@ -7,19 +7,23 @@
 }
 
 .calculator-logo{
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: var(--one-light-text); 
+    margin-top: 10px;
 }
 
 .calculator-switch{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     width: 40%;
     margin-right: 1rem;
 
     & > p{
+        font-size: .8rem;
         color: var(--one-light-text);
+        font-weight: 100;
+        margin: 0;
     }
 }
 
@@ -32,25 +36,39 @@
 
 .switch-types{
     color: var(--one-light-text);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: .8rem;
 }
 
 .switch-main{
-
-    & > label{
-        background: var(--one-keypad-background);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 20px;
-        position: relative;
-        height: 30px;
-        width: 80px;
-    }
+    background: var(--one-keypad-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    height: 30px;
+    width: 80px;
 }
 
-.switch-checkbox{
-    opacity: 0;
+input[type = "radio"]{
+    cursor: pointer;
     position: absolute;
+    opacity: 0;
+}
+
+input[type = "radio"]:first-of-type{
+
+}
+
+input[type = "radio"]:nth-of-type(2){
+    left: 28px;
+}
+
+input[type = "radio"]:last-of-type{
+    right: 4px;
 }
 
 .switch-ball{
@@ -61,8 +79,6 @@
     position: absolute;
     left: 6px;
     transition: 0.3s linear;
+    cursor: pointer;
 }
 
-.switch-checkbox:checked + label .switch-ball{
-    transform: translateX(48px);
-}
