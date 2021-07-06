@@ -56,7 +56,6 @@ $bp-sub-main: 20em; //320px/16px = 20em
 html{
     box-sizing: border-box;
     font-size: 100%;
-    font-family: var(--font-type);
 
     @media only screen and (max-width: $bp-sub-main){
         font-size: 85%;
@@ -69,6 +68,7 @@ html{
 
 body{
     background-color: var(--one-main-background);
+    font-family: var(--font-type);
 
     @media only screen and (min-width: $bp-main){
         display: flex;

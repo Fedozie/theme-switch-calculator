@@ -42,8 +42,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 100%;
-  font-family: var(--font-type); }
+  font-size: 100%; }
   @media only screen and (max-width: 20em) {
     html {
       font-size: 85%; } }
@@ -52,7 +51,8 @@ html {
       font-size: 110%; } }
 
 body {
-  background-color: var(--one-main-background); }
+  background-color: var(--one-main-background);
+  font-family: var(--font-type); }
   @media only screen and (min-width: 27em) {
     body {
       display: flex;
@@ -84,7 +84,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px dotted yellow;
   height: 11.5%; }
 
 .calculator-logo {
@@ -103,6 +102,13 @@ body {
     color: var(--one-light-text);
     font-weight: 100;
     margin: 0; }
+  @media only screen and (min-width: 27em) {
+    .calculator-switch {
+      justify-content: flex-end;
+      margin-right: 0; } }
+  @media only screen and (max-width: 20em) {
+    .calculator-switch {
+      margin-right: 1.8rem; } }
 
 .switch {
   display: flex;
@@ -151,7 +157,6 @@ input[type="radio"]:last-of-type {
 .calculator-keys {
   height: 70%;
   background-color: var(--one-keypad-background);
-  border: 2px dotted yellow;
   border-radius: 8px; }
   .calculator-keys-inner-grid {
     height: 100%;
@@ -168,7 +173,8 @@ input[type="radio"]:last-of-type {
       border-radius: 8px;
       font-size: 2rem;
       font-weight: 700;
-      transition: 0.4s linear; }
+      transition: 0.4s linear;
+      font-family: var(--font-type); }
       @media only screen and (min-width: 27em) {
         .calculator-keys-inner-grid > button {
           cursor: pointer; } }
@@ -265,7 +271,6 @@ input[type="radio"]:last-of-type {
   width: 100%;
   height: 15%;
   border-radius: 3px;
-  border: 2px dotted yellow;
   color: var(--one-light-text);
   padding: .5rem; }
   .calculator-output > .previous-output {
@@ -274,14 +279,74 @@ input[type="radio"]:last-of-type {
     margin-top: .5rem;
     font-size: 2.5rem; }
 
-body.light {
-  background-color: var(--two-main-background); }
-
-body.light .calculator-grid {
+body.light, body.light .calculator-grid {
   background-color: var(--two-main-background); }
 
 body.light .calculator-logo, body.light .calculator-switch > p, body.light .switch-types {
   color: var(--two-dark-text); }
 
-body.light .switch-main {
+body.light .switch-main, body.light .calculator-keys {
   background: var(--two-keypad-background); }
+
+body.light .switch-ball {
+  background-color: var(--two-equal-key-background); }
+
+body.light .white-btn {
+  background-color: var(--two-keys-background);
+  color: var(--two-dark-text);
+  box-shadow: 0px 4px 1px var(--two-keys-shadow); }
+
+body.light .grey-btn {
+  background-color: var(--two-del-key-background);
+  color: var(--one-light-text);
+  box-shadow: 0px 4px 1px var(--two-del-key-shadow); }
+
+body.light .orange-btn {
+  background-color: var(--two-equal-key-background);
+  color: var(--one-light-text);
+  box-shadow: 0px 4px 1px var(--two-equal-key-shadow); }
+
+body.light .calculator-output {
+  background-color: var(--two-screen-background);
+  color: var(--two-dark-text); }
+
+body.light .attribution {
+  color: var(--two-dark-text); }
+  body.light .attribution a {
+    color: var(--two-del-key-background); }
+
+body.neon, body.neon .calculator-grid {
+  background-color: var(--three-main-background); }
+
+body.neon .calculator-logo, body.neon .calculator-switch > p, body.neon .switch-types {
+  color: var(--three-yellow-text); }
+
+body.neon .switch-main, body.neon .calculator-keys {
+  background: var(--three-keypad-background); }
+
+body.neon .switch-ball {
+  background-color: var(--three-equal-key-background); }
+
+body.neon .white-btn {
+  background-color: var(--three-keys-background);
+  color: var(--three-yellow-text);
+  box-shadow: 0px 4px 1px var(--three-keys-shadow); }
+
+body.neon .grey-btn {
+  background-color: var(--three-del-key-background);
+  color: var(--one-light-text);
+  box-shadow: 0px 4px 1px var(--three-del-key-shadow); }
+
+body.neon .orange-btn {
+  background-color: var(--three-equal-key-background);
+  color: var(--three-dark-text);
+  box-shadow: 0px 4px 1px var(--three-equal-key-shadow); }
+
+body.neon .calculator-output {
+  background-color: var(--three-keypad-background);
+  color: var(--three-yellow-text); }
+
+body.neon .attribution {
+  color: var(--three-yellow-text); }
+  body.neon .attribution a {
+    color: var(--three-equal-key-background); }

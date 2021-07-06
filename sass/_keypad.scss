@@ -1,7 +1,6 @@
 .calculator-keys{
     height: 70%;
     background-color: var(--one-keypad-background);
-    border: 2px dotted yellow;
     border-radius: 8px;
 
     &-inner-grid{
@@ -21,6 +20,7 @@
             font-size: 2rem;
             font-weight: 700;
             transition: 0.4s linear;
+            font-family: var(--font-type);
     
             @media only screen and (min-width: $bp-main){
                 cursor: pointer;

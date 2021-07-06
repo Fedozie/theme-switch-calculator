@@ -1,8 +1,4 @@
-body.light{
-    background-color: var(--two-main-background);
-}
-
-body.light .calculator-grid{
+body.light, body.light .calculator-grid{
     background-color: var(--two-main-background);
 }
 
@@ -26,17 +22,72 @@ body.light .white-btn{
 
 body.light .grey-btn{
     background-color: var(--two-del-key-background);
-    color: var(--two-light-text);
+    color: var(--one-light-text);
     box-shadow: 0px 4px 1px var(--two-del-key-shadow);
 }
 
 body.light .orange-btn{
     background-color: var(--two-equal-key-background);
-    color: var(--two-light-text);
+    color: var(--one-light-text);
     box-shadow: 0px 4px 1px var(--two-equal-key-shadow);
 }
 
 body.light .calculator-output{
     background-color: var(--two-screen-background);
     color: var(--two-dark-text);
+}
+
+body.light .attribution{
+    color: var(--two-dark-text);
+
+    & a{
+        color: var(--two-del-key-background);
+    }
+}
+
+body.neon, body.neon .calculator-grid{
+    background-color: var(--three-main-background);
+}
+
+body.neon .calculator-logo, body.neon .calculator-switch > p, body.neon .switch-types{
+    color: var(--three-yellow-text);
+}
+
+body.neon .switch-main, body.neon .calculator-keys{
+    background: var(--three-keypad-background);
+}
+
+body.neon .switch-ball{
+    background-color: var(--three-equal-key-background);
+}
+
+body.neon .white-btn{
+    background-color: var(--three-keys-background);
+    color: var(--three-yellow-text);
+    box-shadow: 0px 4px 1px var(--three-keys-shadow);
+}
+
+body.neon .grey-btn{
+    background-color: var(--three-del-key-background);
+    color: var(--one-light-text);
+    box-shadow: 0px 4px 1px var(--three-del-key-shadow);
+}
+
+body.neon .orange-btn{
+    background-color: var(--three-equal-key-background);
+    color: var(--three-dark-text);
+    box-shadow: 0px 4px 1px var(--three-equal-key-shadow);
+}
+
+body.neon .calculator-output{
+    background-color: var(--three-keypad-background);
+    color: var(--three-yellow-text);
+}
+
+body.neon .attribution{
+    color: var(--three-yellow-text);
+
+    & a{
+        color: var(--three-equal-key-background);
+    }
 }

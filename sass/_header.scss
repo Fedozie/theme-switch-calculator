@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px dotted yellow;
     height: 11.5%;
 }
 
@@ -24,6 +23,15 @@
         color: var(--one-light-text);
         font-weight: 100;
         margin: 0;
+    }
+
+    @media only screen and (min-width: $bp-main){
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-sub-main){
+        margin-right: 1.8rem;
     }
 }
 
