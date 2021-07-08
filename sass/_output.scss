@@ -8,6 +8,7 @@
     border-radius: 3px;
     color: var(--one-light-text);
     padding: .5rem;
+    overflow: scroll;
 
     & > .previous-output{
         font-size: 1.5rem;

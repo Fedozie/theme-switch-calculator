@@ -272,7 +272,8 @@ input[type="radio"]:last-of-type {
   height: 15%;
   border-radius: 3px;
   color: var(--one-light-text);
-  padding: .5rem; }
+  padding: .5rem;
+  overflow: scroll; }
   .calculator-output > .previous-output {
     font-size: 1.5rem; }
   .calculator-output > .current-output {

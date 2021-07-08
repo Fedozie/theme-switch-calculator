@@ -35,31 +35,30 @@
       </div>
     </div>
     <div class="calculator-output">
-      <div class="previous-output"> 399 /</div>
-      <div class="current-output">2</div>
+      <div data-previous-output class="previous-output"> </div>
+      <div type="text" data-current-output class="current-output"></div>
     </div>
     <div class="calculator-keys">
       <div class="calculator-keys-inner-grid">
-        <button class="white-btn zero" data-number>0</button>
-        <button class="white-btn one" data-number>1</button>
-        <button class="white-btn two" data-number>2</button>
-        <button class="white-btn three" data-number>3</button>
-        <button class="white-btn four" data-number>4</button>
-        <button class="white-btn five" data-number>5</button>
-        <button class="white-btn six" data-number>6</button>
-        <button class="white-btn seven" data-number>7</button>
-        <button class="white-btn eight" data-number>8</button>
-        <button class="white-btn nine" data-number>9</button>
-        <button class="white-btn point" data-number>.</button>
-        <button class="white-btn times" data-operation>&times;</button>
-        <button class="white-btn plus" data-operation>&plus;</button>
-        <button class="white-btn" data-operation>&minus;</button>
-        <button class="orange-btn equals" data-equal>&equals;</button>
-        <button class="white-btn" data-operation>/</button>
-        <button class="grey-btn del" data-delete>DEL</button>
-        <button class="grey-btn reset" data-reset>RESET</button>
+        <button onclick='appendNumber("0")' class="white-btn zero">0</button>
+        <button onclick='appendNumber("1")' class="white-btn one">1</button>
+        <button onclick='appendNumber("2")' class="white-btn two">2</button>
+        <button onclick='appendNumber("3")' class="white-btn three">3</button>
+        <button onclick='appendNumber("4")' class="white-btn four" >4</button>
+        <button onclick='appendNumber("5")' class="white-btn five">5</button>
+        <button onclick='appendNumber("6")' class="white-btn six" >6</button>
+        <button onclick='appendNumber("7")' class="white-btn seven">7</button>
+        <button onclick='appendNumber("8")' class="white-btn eight">8</button>
+        <button onclick='appendNumber("9")' class="white-btn nine">9</button>
+        <button onclick='appendNumber(".")' class="white-btn point">.</button>
+        <button onclick='appendNumber("*")' class="white-btn times">&times;</button>
+        <button onclick='appendNumber("+")' class="white-btn plus">&plus;</button>
+        <button onclick='appendNumber("-")' class="white-btn minus">&minus;</button>
+        <button onclick="solve()" class="orange-btn equals">&equals;</button>
+        <button onclick='appendNumber("/")' class="white-btn">/</button>
+        <button onclick='dlt()' class="grey-btn del">DEL</button>
+        <button onclick='reset()' class="grey-btn reset">RESET</button>
       </div>
-      
     </div>
   </div>
 
