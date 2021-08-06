@@ -21,7 +21,7 @@ The challenge of this task was to create a funtional calculator on the web whose
 
 ### Screenshot
 
-![]()
+![Image of the calculator on mobile](./images/Screenshot_2021-08-06-08-47-02-358_com.android.chrome.jpg)
 
 ### Links
 
