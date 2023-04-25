@@ -14,7 +14,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 The challenge of this task was to create a funtional calculator on the web whose theme could also be toggled amongst three theme types; dark i.e. the default, light and neon. For this task, I made use of HMTL, SCSS and Javascript.
